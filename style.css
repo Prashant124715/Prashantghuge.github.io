@@ -359,3 +359,114 @@ footer {
   transform: translateY(-10px) scale(1.04);
   box-shadow: 0 20px 40px rgba(0, 188, 212, 0.25);
 }
+
+
+/* =====================================
+   RESPONSIVE FIX (DESKTOP + MOBILE)
+   Paste this at the END of style.css
+===================================== */
+
+/* Tablet & Mobile */
+@media (max-width: 992px) {
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    padding: 15px 25px;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 10px;
+    display: inline-block;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    min-height: auto;
+    padding: 30px 20px;
+  }
+
+  .hero-img img {
+    width: 220px;
+    margin-bottom: 25px;
+  }
+
+  .name {
+    font-size: clamp(28px, 5vw, 40px);
+  }
+
+  .role {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    margin-right: 0;
+  }
+
+  /* SECTIONS */
+  .section,
+  .skills-section,
+  .projects-section {
+    padding: 60px 8%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* SKILLS */
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  /* PROJECTS */
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT */
+  .contact-box {
+    font-size: 16px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+  .hero-img img {
+    width: 180px;
+  }
+
+  .name {
+    font-size: 26px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .project-card {
+    padding: 25px 18px;
+  }
+}
+
+/* EXTRA SAFETY: prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+
